@@ -98,7 +98,8 @@ Although original data source provides paper data published between 19xx and 201
 * [x] 画三个图，根据合作者数量进行划分。
 * [x] 回归曲线
 * [x] 对比斜率的变化
-* [ ] 斜率的变化到底代表了什么？
+* [x] 斜率的变化到底代表了什么？
+* [x] 程序有Bug 修改
 
 我们想知道这些网络的Degree Distribution是怎么样的。我们计算了从1975到2017年，不同论文(<= 3, 4, 5)所组成的合作网络的degree distribution。为了便于清洗地可视化，我们在下面的图中只展示了其中6年的数据。对于任何种类论文的任何一年，我们都观察到了明显power-law现象。
 
@@ -108,8 +109,38 @@ Although original data source provides paper data published between 19xx and 201
 
 如果他们开始和不同的人合作，那么就会有更多的人有更高的度；换言之直线会变的更加平缓。
 
-因而我们可以指出合作模式的一个变化：学者在倾向于和更多不同的人合作。当然我们可以plot出所有论文的变化趋势，但是我们觉得我们的这张图更能体现上面的结论。因为在考虑所有论文时，多合作者论文的增加肯定会影响度的分布；尽管我们并未观测到论文比例的变化和slope的变化有相关性，但是这张图更能体现上述的结论。
+因而我们可以指出合作模式的一个变化：学者在倾向于和更多不同的人合作。当然我们可以plot出所有论文的变化趋势，但是我们觉得我们的这张图更能体现上面的结论。因为在考虑所有论文时，多合作者论文的增加肯定会影响度的分布；尽管我们并未观测到论文比例的变化和slope的变化有相关性，但是这张图更能体现上述的结论。而且这并不是总的趋势，而是每一年的变化。
 
-![Unknown](https://i.imgur.com/ZWWMjMR.png)
+![Unknown](https://i.imgur.com/wkePMXK.png)
 
-![Unknown-1](https://i.imgur.com/xEzzEYl.png)
+
+![Unknown-4](https://i.imgur.com/DmpGaSY.png)
+
+
+### Average Clustering Coefficient
+
+我们还需要计算这些网络的average clustering coefficient。clustering coefficient的定义是xxxx。是一个点的邻接点之间相互连接的程度。例如生活社交网络中，你的朋友之间相互认识的程度。有证据表明，在各类反映真实世界的网络结构，特别是社交网络结构中，各个结点之间倾向于形成密度相对较高的网群。而平均聚集系数的定义是xxx(公式)。
+
+从图中我们可以明显地看出，这些网络的平均聚集系数都在不断地增加。
+
+
+### Rich-Club Coefficient
+
+定义是什么，含义是什么？
+富人俱乐部现象是不是在增加
+![Rich-Club Coefficient Paper -Authors <= 5-](https://i.imgur.com/p4IYQcy.png)
+
+![Rich-Club Coefficient Paper -Authors <= 3-](https://i.imgur.com/bA1uUOS.png)
+
+![Rich-Club Coefficient Paper -Authors <= 4-](https://i.imgur.com/iCf149i.png)
+
+
+![](https://i.imgur.com/Kx0yL0o.jpg)
+![](https://i.imgur.com/fOjEyCg.jpg)
+
+
+### Betweenness
+
+### Closeness Centrality
+
+在不联通图之间的定义
