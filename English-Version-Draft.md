@@ -19,6 +19,18 @@ In this report, we mainly investigate in the following research questions:
 
 The structure of this report is as follows: In Section 2, we mainly discuss the research work related to this question. In Section 3 we introduce how to extract and pre-process the data. In the fourth section, we show the results of the calculations and analyze the changes in the cooperation pattern. We conclude this report in the final section.
 
+# Related Work
+
+In this section, we mainly introduce the research papers related to our topic, including common statistical properties of scientific collaboration networks, domains that are analyzed and work on evolution of collaboration network.
+
+Newman first studied the structure of scientific collaboration networks in different research fields. He showed that these collaboration networks form “small worlds” [1]. In this paper, many indicators were investigated, including: number of authors, mean papers per author, number of collaborators (node degree), the giant component and average degrees of separation. Then Newman analyzed more detailed statistical properties of scientific co-authorship networks [2], including size of giant component, closeness, betweenness and clustering coefficient.
+
+Many papers were inspired by Newman’s initial work. People started to analyze the co-authorship in different domains. Hou et al. studied the structure of scientific collaboration networks in Scientometrics [3]. Tomassini et al. paid attention to genetic programming collaboration network [4]. Some researchers used countries to separate the network, e.g. collaboration network in Turkey [5].
+
+Some researchers also try to identify how the scientific collaboration networks evolve. Barabsi et al. [6] are the first to infer the dynamic and the structural mechanisms that govern the evolution and topology of this complex system. Tomassini [7] studied the genetic programming network and found that degree distribution tends to stabilize toward an exponentially truncated power-law. Huang et al analyze different fields in computer science and found that major observations are that the database community is the best connected while the AI community is the most assortative. Lara-Cabrera et at [8] chose an interdisciplinary domain in computer science as research objects and also observed sub-linear preferential attachment for new nodes. 
+
+
+
 # Data and Methodology
 
 ## Data Preparation
@@ -30,8 +42,6 @@ The original data we use is Citation Network Dataset [xx].The citation data is e
 Our hypothesis for constructing a network is that if four authors co-author a paper, then we assume that the four authors know each other and they form a fully connected graph. We do not rule out some papers with multiple versions, but this has not affected our analysis much. Because in our network, the cooperative relationship between scholars is dual. Even if the same paper was included twice for some reason, it had no effect.
 
 Our goal is to extract from the raw data collaboration networks formed by all papers with fewer authors published in a particular year. In order to make our research more reliable, we constructed three sets of data: a collection of papers with less than 4 collaborators, a collection of papers with fewer than 5 collaborators, and a collection of papers with fewer than 6 collaborators. The specific extraction process is as follows:
-
-* [x] Draw a process graph
 
 ![process graph](https://i.imgur.com/2cCy01S.jpg)
 
@@ -46,3 +56,6 @@ Our goal is to extract from the raw data collaboration networks formed by all pa
 
 
 Although original data source provides paper data published between 1890 and 2018, but we only choose papers from 1975 to 2017 as our research object. Since many old papers might not be contained in the dataset and affect the data analysis results.
+
+## Methodology
+
