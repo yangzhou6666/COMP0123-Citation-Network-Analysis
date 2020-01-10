@@ -1,10 +1,12 @@
+
+    Analysis of Scientific Collaboration Trends in Papers with Fewer Authors
+
 # To-Do
 
 * [x] Introduction Part
+* [x] Related Work
 
 # Introduction
-
-— Title: Analysis of Scientific Collaboration Trends in Papers with Fewer Authors
 
 互联网在联系世界的同时，也连接起了学者们，使其更方便地展开合作。学者可以使用很多工具来方便地进行学术合作，比如使用Overleaf共同地撰写论文，使用Github共同的撰写代码。
 而且现在的学术研究很多是跨学科的，需要不同领域的人进行合作。现在有些任务的工作量很大，需要多个人共同参与才能完成。
@@ -21,7 +23,6 @@
 
 1. 拥有不同作者数量的论文，几十年来占当年论文数量的比例如何变化？
 2. 对于合作者数量少于6的论文，他们所组成的合作网络中各项指标如何变化？
-
 
 # Related Work
 
@@ -127,7 +128,7 @@ Although original data source provides paper data published between 19xx and 201
 ### Rich-Club Coefficient
 
 定义是什么，含义是什么？
-富人俱乐部现象是不是在增加
+富人俱乐部现象是不是在增加,是的
 ![Rich-Club Coefficient Paper -Authors <= 5-](https://i.imgur.com/p4IYQcy.png)
 
 ![Rich-Club Coefficient Paper -Authors <= 3-](https://i.imgur.com/bA1uUOS.png)
@@ -139,8 +140,10 @@ Although original data source provides paper data published between 19xx and 201
 ![](https://i.imgur.com/fOjEyCg.jpg)
 
 
-### Betweenness
+## Data Visualisation
 
-### Closeness Centrality
 
-在不联通图之间的定义
+# Conclusion
+
+
+
