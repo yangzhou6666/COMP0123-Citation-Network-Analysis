@@ -5,6 +5,9 @@
 
 * [x] Introduction Part
 * [x] Related Work
+* [ ] 我们的网络并不是增长的关系
+
+
 
 # Introduction
 
@@ -29,6 +32,14 @@
 本报告的结构如下：第二节我们主要探讨了在与这个问题相关的研究工作。第三节我们介绍了如何对我们的数据进行预处理。第四节我们将展示计算的结果并分析合作模式的变化。最后一节我们总结这篇报告。
 
 # Related Work
+在这一节中，我们主要介绍相关的研究工作。主要分为三个部分，学术合作网络中通常分析的属性，研究者将其应用在哪些领域，以及网络如何演化。
+
+Newman first studied the structure of scientific collaboration networks in different research fields. He showed that these collaboration networks form “small worlds” [1]. In this paper, many indicators were investigated, including: number of authors, mean papers per author, number of collaborators (node degree), the giant component and average degrees of separation. Then Newman analyzed more detailed statistical properties of scientific co-authorship networks [2], including size of giant component, closeness, betweenness and clustering coefficient.
+
+Many papers were inspired by Newman’s initial work. People started to analyze the co-authorship in different domains. Hou et al. studied the structure of scientific collaboration networks in Scientometrics [3]. Tomassini et al. paid attention to genetic programming collaboration network [4]. Some researchers used countries to separate the network, e.g. collaboration network in Turkey [5].
+
+Some researchers also try to identify how the scientific collaboration networks evolve. Barabsi et al. [6] are the first to infer the dynamic and the structural mechanisms that govern the evolution and topology of this complex system. Tomassini [7] studied the genetic programming network and found that degree distribution tends to stabilize toward an exponentially truncated power-law. Huang et al analyze different fields in computer science and found that major observations are that the database community is the best connected while the AI community is the most assortative. Lara-Cabrera et at [8] chose an interdisciplinary domain in computer science as research objects and also observed sub-linear preferential attachment for new nodes. 
+
 
 
 # Data and Methodology
@@ -60,7 +71,11 @@ Although original data source provides paper data published between 1890 and 201
 
 ## Analysis Methodology
 
-在本小节我们简要地介绍我们如何分析数据。我们主要的分析工具是那个什么可视化工具和Python的xxx包。
+在本小节我们简要地介绍我们如何分析这些数据，以及相关的工具和第三方库。
+
+我们使用Python的第三方库networkx [xx]来计算合作网络的相关property。networkx提供了丰富的API来计算degree distribution, rich club coefficient, xxx等属性。network还提供了简单的网络可视化功能，但是并不能方便地展示这些属性。因此我们写了python脚本使用mlxxx库来进行数据可视化。
+
+在复杂网络领域另一个常用的工具是Gephi [xx]. Gephi是一个非常强大的工具，也有着易于使用的界面。用于不但只需要通过a few clicks来计算属性，他还能很好地plot这些数据。但是我们的研究对象接近120个网络，Gephi并没有提供合适的比较网络的功能。因此我们还是选择了自己撰写脚本处理数据的方式。
 
 
 
@@ -146,6 +161,10 @@ Although original data source provides paper data published between 1890 and 201
 
 ## Data Visualisation
 
+
+# 缺点
+
+文章缺少坚实的理论基础
 
 # Conclusion
 
