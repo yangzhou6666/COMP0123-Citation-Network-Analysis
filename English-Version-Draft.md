@@ -18,3 +18,31 @@ In this report, we mainly investigate in the following research questions:
 
 
 The structure of this report is as follows: In Section 2, we mainly discuss the research work related to this question. In Section 3 we introduce how to extract and pre-process the data. In the fourth section, we show the results of the calculations and analyze the changes in the cooperation pattern. We conclude this report in the final section.
+
+# Data and Methodology
+
+## Data Preparation
+
+In this section, we are going to introduce how we extract and pre-process our data.
+
+The original data we use is Citation Network Dataset [xx].The citation data is extracted from DBLP, ACM, MAG (Microsoft Academic Graph), and other sources. The dataset contains more than 4 million papers published within 1890 and 2018. Every paper and author will have an ID to uniquely identify them. This dataset also provides rich metadata, such as the title of the paper, the name of the conference, the publisher, etc., but we do not need these irrelevant data. All we need is the publication year and its author ID.
+
+Our hypothesis for constructing a network is that if four authors co-author a paper, then we assume that the four authors know each other and they form a fully connected graph. We do not rule out some papers with multiple versions, but this has not affected our analysis much. Because in our network, the cooperative relationship between scholars is dual. Even if the same paper was included twice for some reason, it had no effect.
+
+Our goal is to extract from the raw data collaboration networks formed by all papers with fewer authors published in a particular year. In order to make our research more reliable, we constructed three sets of data: a collection of papers with less than 4 collaborators, a collection of papers with fewer than 5 collaborators, and a collection of papers with fewer than 6 collaborators. The specific extraction process is as follows:
+
+* [x] Draw a process graph
+
+![process graph](https://i.imgur.com/2cCy01S.jpg)
+
+
+1. Convert original data (.txt file) to a csv file. Each row represents a paper, including paperID, publication year, and IDs of all authors.
+2. Separate the csv file in Step 1 to multiple csv files according to publication year.
+3. For the file of each year, extract three csv file:
+    1. Set of papers with less than 4 authors
+    2. Set of papers with less than 5 authors
+    3. Set of papers with less than 6 authors
+4. In the last step, we get $3 * year\_range$ csv files. We convert these files to network format.
+
+
+Although original data source provides paper data published between 1890 and 2018, but we only choose papers from 1975 to 2017 as our research object. Since many old papers might not be contained in the dataset and affect the data analysis results.
