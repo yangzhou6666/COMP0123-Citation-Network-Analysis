@@ -77,8 +77,6 @@ Although original data source provides paper data published between 1890 and 201
 
 在复杂网络领域另一个常用的工具是Gephi [xx]. Gephi是一个非常强大的工具，也有着易于使用的界面。用于不但只需要通过a few clicks来计算属性，他还能很好地plot这些数据。但是我们的研究对象接近120个网络，Gephi并没有提供合适的比较网络的功能。因此我们还是选择了自己撰写脚本处理数据的方式。
 
-
-
 ## Potential Ethical Issues
 
 毫无疑问本研究的数据是来自Human，此研究是典型的secondary data analysis，我们无法对此项研究做到informed consent。。。巴拉巴拉参照一下另一份report。

@@ -59,3 +59,63 @@ Although original data source provides paper data published between 1890 and 201
 
 ## Methodology
 
+In this section we briefly describe how we analyze this data, as well as related tools and third-party libraries.
+
+We use Python's third-party library networkx [xx] to calculate the relevant properties in scientific collaboration networks. Networkx provides rich APIs to calculate network attributes such as degree distribution, rich club coefficient, betweenness centrality and more.
+It also provides simple network visualization functions, but it is not convenient to plot the properties, so we wrote Python scripts to visualize data with the matplotlib library.
+
+Another commonly used tool in the field of complex networks is Gephi [xx]. Gephi is a very powerful tool with an easy-to-use interface. Not only can users calculate attributes with just a few clicks, Gephi can also plot this data well. But our research object is 120 networks. Gephi does not provide a suitable function for comparing attributes in different networks, so we chose to write our own script to process the data.
+
+# Analysis of Trends in Network
+
+## Changes in the Proportion of Papers with Different Numbers of Authors
+
+The first question we have to answer is, is academic cooperation increasing? 
+
+We counted the number of papers in different years and the number of collaborators and their proportion in the total number of papers in that year.
+
+We counted the proportion of papers with different number of authors between 1950 and 2017 and plot the data in Figure 2. The x-axis represents year, and the y-axis represent the proportion. Data of papers with different number of authors is displayed in different colors. 
+
+![WX20200109-120056](https://i.imgur.com/ghD6KwW.png)
+
+We can assert from this picture that academic cooperative papers in the computer field have been increasing since 1950. It can be seen from the figure that around 1950, the proportion of papers without collaborators was very high(close to 90%). But until 2017, the proportion of independent authors' papers dropped almost uniformly, to almost 7%.
+
+Corresponding to this is the continuous growth of multi-collaborative papers.The papers of the dual collaborators continued to grow until they peaked (35%) around 1995 and then began to decline. Although the years to the peak were different, the percentage change in the papers of the three collaborators showed a similar pattern: it grew to around 2007 and then began to decline. From the figure, we can also observe that the proportion of the papers of the four collaborators also peaked in 2017 (slope 0), and it is likely that the proportion of the papers of the four collaborators will start to decline in the future.
+
+The decline in the proportion of these papers with fewer authors also means an increase in the proportion of papers with more authors. As shown in the figure, the proportion of papers with 5, 6, 7 collaborators is increasing (the slope of the curve is also increasing).
+
+Although we can't predict the end of growth, this chart very clearly illustrates that academic cooperation in the computer field has been increasing and will continue to increase.
+
+
+## Statistical Properties of Collaboration Networks Categorized by Number of Authors
+
+From a macro perspective, academic cooperation has been growing. But let's take a look at how academic cooperation networks have changed. We mainly focus on the following properties:
+
+* Degree Distribution
+* Clustering Coefficient
+* Rich-Club
+* Betweenness
+* Closeness Centrality
+
+### Degree Distribution
+
+We want to examine how degree distribution of these networks looks like. We calculated the degree distribution of cooperation networks composed of different papers (number of authors <= 3, 4, 5) from 1975 to 2017. For more clear visualization, we only illustrate 6 years of network data in the following figure. We have observed significant power-law phenomena for any year of any type of paper.
+
+![Unknown-4](https://i.imgur.com/DmpGaSY.png)
+
+We fitted these data using univariate linear regression and observed an interesting phenomenon: despite fluctuations, the slope of these curves generally increased with increasing year. If you compare slopes of different kinds of papers, you can always observe that the slope increases with the number of authors. If we look at Figure 1 and Figure 2 together, we can find that there is no significant correlation between the proportion of (number of authors <= 3, 4, 5)papers and the slope of power-law phenomena.
+
+![Unknown](https://i.imgur.com/wkePMXK.png)
+
+We believe that the gentler slope actually indicates that scholars are more inclined to cooperate with more people. Let us give a simple example to illustrate.
+
+We only consider the network composed by papers with 3 or fewer authors. 
+If researchers are only working with fixed people, no matter how many papers they publish, their only neighbors are each other.
+
+The degree of each point in this network is usually 2 or 3, and the network will be filled with a large number of components that are not connected to each other. If we plot the degree distribution, we get a very steep straight line.
+
+If they start to work with different people, then more people will have a higher degree; in other words, the curve will become flatter. We can therefore point to a change in the pattern of cooperation: scholars tend to collaborate with more people.
+
+
+
+
