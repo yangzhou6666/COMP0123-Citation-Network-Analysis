@@ -1,5 +1,9 @@
 # Title:  Analysis of Scientific Collaboration Trends in Papers with Fewer Authors
 
+# Abstract
+
+In this report, we mainly analyze the scientific collaboration trends in papers with fewer authors. Unlike the other work, we do not investigate how a collaboration network evolves. We analyze papers published in different year separately instead. We counted the percentage of computer-related papers with different numbers of authors from 1950 to 2017. We found a very clear conclusion: the proportion of papers with more collaborators is increasing, and the proportion of papers with fewer collaborators is decreasing, and this trend will continue. To explore the changes in the pattern of cooperation in more detail, we calculated the degree distribution of 120 scientific cooperation networks. We can conclude that even if only considering papers with fewer authors, scholars tend to collaborate with more people. Through calculation and analysis of the Rich club coefficient, we cannot judge how cooperation patterns change among low-degree nodes, but we can draw the following inference: The cooperation between Rich nodes is becoming more frequent.
+
 # Introduction
 
 It is a common sense that scientific collaboration has been increasing. There are many reasons to such increase. While the Internet connects the world, it also connects scholars and makes it more convenient for them to collaborate. More and more tools are available for scholars, e.g. Overleaf for writing drafts and Github for contributing to codebase. Besides, much scientific research nowadays is interdisciplinary and requires researchers from different domains to collaborate.
@@ -127,8 +131,6 @@ If they start to work with different people, then more people will have a higher
 
 ### Rich-Club Coefficient
 
-我们研究学术合作网络中的富人俱乐部现象来分析那些学术领域的超级明星之间是如何合作的。
-
 We study the Rich-club phenomenon in the scientific cooperation network to analyze how the superstars in the academic field cooperate with each other.
 
 Rich-club phenomenon is first discovered by Zhou [xxx](The rich-club phenomenon in the Internet topology) in the Internet topology. The rich nodes are a small number of nodes with large numbers of links and are very well connected to each other. In the original paper, the rich-club coefficient was defined as:
@@ -161,8 +163,12 @@ Cooperation between the rich nodes is becoming more frequent.
 
 ![Rich-Club Coefficient Paper -Authors <= 5-](https://i.imgur.com/p4IYQcy.png)
 
-![Rich-Club Coefficient Paper -Authors <= 3-](https://i.imgur.com/bA1uUOS.png)
+# Discussion and Conclusion
 
-![Rich-Club Coefficient Paper -Authors <= 4-](https://i.imgur.com/iCf149i.png)
+In this report, we mainly analyze the scientific collaboration trends in papers with fewer authors. Unlike the other work, we do not investigate how a collaboration network evolves. We analyze papers published in different year separately instead, which can better reflect the changing trend of academic cooperation behaviours in each year. Besides, we do not consider all the papers but divide papers according to the numbers of collaborators. Research on this particular subset is indeed temporarily lacking. We want to verify some common properties in scientific collaboration networks, such as whether Power law and Rich-Club phenomena are related to the number of collaborators in papers.
 
+We counted the percentage of computer-related papers with different numbers of authors from 1950 to 2017. We found a very clear conclusion: the proportion of papers with more collaborators is increasing, and the proportion of papers with fewer collaborators is decreasing, and this trend will continue.
 
+To explore the changes in the pattern of cooperation in more detail, we calculated the degree distribution of 120 scientific cooperation networks. We can conclude that even if only considering papers with fewer authors, scholars tend to collaborate with more people.
+
+Through calculation and analysis of the Rich club coefficient, we cannot judge how cooperation patterns change among low-degree nodes, but we can draw the following inference: The cooperation between Rich nodes is becoming more frequent.

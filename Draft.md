@@ -7,7 +7,15 @@
 * [x] Related Work
 * [ ] 我们的网络并不是增长的关系，而是合作模式的变化
 
+# Abstract
 
+在这篇报告中，我们主要分析了Scientific Collaboration Trends in Papers with Fewer Authors. 和其他工作不同，我们并不探究同一个学术网络如何随着时间演化,ershi 独立分析每一年发表的文章。这更能体现学者每一年合作行为的变化趋势。另外，我们并没有分析这个领域的所有论文数据，而是根据论文的合作者人数对数据进行分组。针对这个特定子集的研究的确是学界所暂时缺少的，以及我们想验证学术合作网络中的一些常见性质，如Power law和Rich-Club是否与论文合作者的数量有关。
+
+我们统计了1950年至2017年的计算机相关论文中，在每一年，不同作者数量的论文所占的比例。我们发现了非常明显的结论：论文的合作者数量一直在增加，且这个趋势将持续下去。
+
+为了更细致地探究合作模式的变化，我们计算了共120个学术合作网络的Degree distribution并得出推论：即使只考虑papers with fewer authors,学者也在倾向于和更多的人合作。
+
+通过计算与分析Rich club coefficient，我们并没有得出低度节点之间合作模式的变化，但是可以得出如下推论：Rich node之间的合作正在变得更加频繁。
 
 # Introduction
 
@@ -179,11 +187,16 @@ In our report we use the latter one mainly because the networkx library also use
 ## Data Visualisation
 
 
-# 缺点
+# Threats to Vadility
 
 文章缺少坚实的理论基础
 
-# Conclusion
+# Conclusion and Discussion
 
-在这篇报告中，我们
+在这篇报告中，我们主要分析了Scientific Collaboration Trends in Papers with Fewer Authors. 和其他工作不同，我们并不探究同一个学术网络如何随着时间演化,ershi 独立分析每一年发表的文章。这更能体现学者每一年合作行为的变化趋势。另外，我们并没有分析这个领域的所有论文数据，而是根据论文的合作者人数对数据进行分组。针对这个特定子集的研究的确是学界所暂时缺少的，以及我们想验证学术合作网络中的一些常见性质，如Power law和Rich-Club是否与论文合作者的数量有关。
 
+我们统计了1950年至2017年的计算机相关论文中，在每一年，不同作者数量的论文所占的比例。我们发现了非常明显的结论：论文的合作者数量一直在增加，且这个趋势将持续下去。
+
+为了更细致地探究合作模式的变化，我们计算了共120个学术合作网络的Degree distribution并得出推论：即使只考虑papers with fewer authors,学者也在倾向于和更多的人合作。
+
+通过计算与分析Rich club coefficient，我们并没有得出低度节点之间合作模式的变化，但是可以得出如下推论：Rich node之间的合作正在变得更加频繁。
