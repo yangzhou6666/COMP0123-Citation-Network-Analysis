@@ -117,5 +117,52 @@ The degree of each point in this network is usually 2 or 3, and the network will
 If they start to work with different people, then more people will have a higher degree; in other words, the curve will become flatter. We can therefore point to a change in the pattern of cooperation: scholars tend to collaborate with more people.
 
 
+### Average Clustering Coefficient
+
+* [ ] 定义是什么
+
+我们还需要计算这些网络的average clustering coefficient。clustering coefficient的定义是xxxx。是一个点的邻接点之间相互连接的程度。例如生活社交网络中，你的朋友之间相互认识的程度。有证据表明，在各类反映真实世界的网络结构，特别是社交网络结构中，各个结点之间倾向于形成密度相对较高的网群。而平均聚集系数的定义是xxx(公式)。
+
+从图中我们可以明显地看出，这些网络的平均聚集系数都在不断地增加。
+
+
+### Rich-Club Coefficient
+
+我们研究学术合作网络中的富人俱乐部现象来分析那些学术领域的超级明星之间是如何合作的。
+
+We study the Rich-club phenomenon in the scientific cooperation network to analyze how the superstars in the academic field cooperate with each other.
+
+Rich-club phenomenon is first discovered by Zhou [xxx](The rich-club phenomenon in the Internet topology) in the Internet topology. The rich nodes are a small number of nodes with large numbers of links and are very well connected to each other. In the original paper, the rich-club coefficient was defined as:
+
+$\phi(r) = \frac{2E(r)}{r(r-1)}$
+
+In this equation, $r$ is a node's position in a sorted list of decreasing degrees. Modified definition replace rank $r$ with node degree $k$. For each degree $k$, the rich-club coefficient is the ratio of the number of actual to the number of potential edges for nodes with degree greater than $k$ [xxx](The rich-club phenomenon across complex network hierarchies).
+
+$\phi(k) = \frac{2E(k)}{k(k-1)}$
+
+In our report we use the latter one mainly because the networkx library also uses this definition. 
+
+
+We calculated the Rich-club coefficient of the scientific cooperation network composed of different types (number of authors <= 3, 4, 5) papers from 1975 to 2017. For more clear visualization, we illustrate a network rich-club coefficient every four years in Figure 4. 
+
+From these figures we can observe that in the collection of papers composed of 3, 4 or 5 authors, the phenomenon of rich clubs exists, and they showed a similar pattern of change
+
+1. When the degree of nodes is relatively small, the rich-club coefficient of nodes with the same degree decreases as the year increases.
+2. As the years increase, the difference in the rich-club coefficient decreases.
+3. In the ten years since 2008, the rich man's club coefficient curve has been very close.
+
+Such changes can be explained. We think the first point is mainly due to the increase in the number of papers and authors.
+Because this means that the number of nodes with a degree greater than $ k $ has increased dramatically. $k(k-1)$ grows much faster than $2E(k)$ when $k$ is relative small. So rich club coefficient of the nodes with same degree decreases as the year increases. The difference in coefficient between adjacent years will also become smaller as the year increases, which is observed in point 2.
+
+But more interestingly, for the nodes with relatively high degree, the opposite has even happened. It actually means that for nodes with higher degree, in other words, the rich nodes, $2E(k)$ is growing faster. 
+From our simple analysis, we can't get the change of the cooperation pattern between low-level nodes, but we can draw the following inferences:
+
+Cooperation between the rich nodes is becoming more frequent.
+
+![Rich-Club Coefficient Paper -Authors <= 5-](https://i.imgur.com/p4IYQcy.png)
+
+![Rich-Club Coefficient Paper -Authors <= 3-](https://i.imgur.com/bA1uUOS.png)
+
+![Rich-Club Coefficient Paper -Authors <= 4-](https://i.imgur.com/iCf149i.png)
 
 

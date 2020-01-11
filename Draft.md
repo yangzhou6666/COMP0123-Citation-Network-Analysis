@@ -5,7 +5,7 @@
 
 * [x] Introduction Part
 * [x] Related Work
-* [ ] 我们的网络并不是增长的关系
+* [ ] 我们的网络并不是增长的关系，而是合作模式的变化
 
 
 
@@ -144,18 +144,37 @@ Although original data source provides paper data published between 1890 and 201
 
 ### Rich-Club Coefficient
 
-定义是什么，含义是什么？
-富人俱乐部现象是不是在增加,是的
+我们研究学术合作网络中的富人俱乐部现象是来分析那些学术领域的超级明星之间是如何合作的。
+
+Rich-club phenomenon is first discovered by Zhou [xxx](The rich-club phenomenon in the Internet topology) in the Internet topology. The rich nodes are a small number of nodes with large numbers of links and are very well connected to each other. In the original paper, the rich-club coefficient was defined as:
+
+$\phi(r) = \frac{2E(r)}{r(r-1)}$
+
+In this equation, $r$ is a node's position in a sorted list of decreasing degrees. Modified definition replace rank $r$ with node degree $k$. For each degree $k$, the rich-club coefficient is the ratio of the number of actual to the number of potential edges for nodes with degree greater than $k$ [xxx](The rich-club phenomenon across complex network hierarchies).
+
+$\phi(k) = \frac{2E(k)}{k(k-1)}$
+
+In our report we use the latter one mainly because the networkx library also uses this definition. 
+
+![](https://i.imgur.com/LNjhmOa.jpg)
+
+我们计算了从1975年到2017年以来，每一年中不同种类的论文构成的学术合作网络的Rich-club系数，并将他们在Figure 4中展示出来。为了清晰的可视化，我们每间隔四年展示一个网络。从这些图中，我们可以观测到在由任何作者数量组成的论文集合中，富人俱乐部现象都存在。而且他们展示出了一种相似的变化模式：
+
+1. 当节点的度比较少时，拥有同样度的节点，随着年份的增加，富人俱乐部系数却下降了。
+2. 拥有相同度的节点，随着年份的增加，每四年之间富人俱乐部系数的差在减少
+3. 2008年以来的这十年，富人俱乐部系数曲线已经非常接近
+
+这样的变化是可以解释的。我们认为第一点主要是由于论文数量与作者数量的上升导致的。因为这意味着度大于$k$的节点数量大大增加了。这个公式$\phi(k) = \frac{2E(k)}{k(k-1)}$这个公式中分母的增长速度要远快于分子。因此拥有同样度的节点，随着年份的增加，富人俱乐部系数却下降了。而且这个当$k$固定时，相邻年份间这个公式的差值会随着年份增加而越来越小。
+
+但是有趣的是，对于度$k$更高的节点，甚至出现了相反的情况。这正是说明了公式$\phi(k) = \frac{2E(k)}{k(k-1)}$中分子的增速更快了。即富人之间的连接正在快速的增加。从我们的简单分析中并不能得出低度节点之间合作模式的变化，但是可以得出如下推论：
+
+富人之间的合作正在变得更加频繁。
+
 ![Rich-Club Coefficient Paper -Authors <= 5-](https://i.imgur.com/p4IYQcy.png)
 
 ![Rich-Club Coefficient Paper -Authors <= 3-](https://i.imgur.com/bA1uUOS.png)
 
 ![Rich-Club Coefficient Paper -Authors <= 4-](https://i.imgur.com/iCf149i.png)
-
-
-![](https://i.imgur.com/Kx0yL0o.jpg)
-![](https://i.imgur.com/fOjEyCg.jpg)
-
 
 ## Data Visualisation
 
