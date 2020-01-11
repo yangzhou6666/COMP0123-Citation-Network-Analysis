@@ -104,7 +104,9 @@ From a macro perspective, academic cooperation has been growing. But let's take 
 ### Degree Distribution
 
 We want to examine how the degree distribution of these networks looks like. We calculated the degree distribution of cooperation networks composed of different papers (number of authors <= 3, 4, 5) from 1975 to 2017. For more clear visualization, we only illustrate 6 years of network data in the following figure. We have observed significant power-law phenomena for any year.
-![Unknown-4](https://i.imgur.com/DmpGaSY.png)
+
+![IMG_4921](https://i.imgur.com/nTXfhuh.jpg)
+
 
 We fitted these data using univariate linear regression and observed an interesting phenomenon: despite fluctuations, the slope of these curves generally increased with increasing year. If you compare slopes of different kinds of papers, you can always observe that the slope increases with the number of authors. If we look at Figure 1 and Figure 2 together, we can find that there is no significant correlation between the proportion of (number of authors <= 3, 4, 5)papers and the slope of power-law phenomena.
 
@@ -122,11 +124,21 @@ If they start to work with different people, then more people will have a higher
 
 ### Average Clustering Coefficient
 
-* [ ] 定义是什么
+![](https://i.imgur.com/TNjsSUX.jpg)
 
-我们还需要计算这些网络的average clustering coefficient。clustering coefficient的定义是xxxx。是一个点的邻接点之间相互连接的程度。例如生活社交网络中，你的朋友之间相互认识的程度。有证据表明，在各类反映真实世界的网络结构，特别是社交网络结构中，各个结点之间倾向于形成密度相对较高的网群。而平均聚集系数的定义是xxx(公式)。
 
-从图中我们可以明显地看出，这些网络的平均聚集系数都在不断地增加。
+We also calculate the average clustering coefficient of these networks.
+The clustering coefficient is defined as:
+
+$C_i = \frac{2e_i}{k_i (k_i - 1)}$
+
+$k_i$ is the degree of node $i$, and $e_i$ is the number of edges among $i$'s neighbours. It measures the connectivity among a node's neighbours. For example, in social network, how your friends know each other. Evidence shows that in various types of real world networks, especially social network structures, clusters tend to form between nodes. The average clustering coefficient is defined as:
+
+$C = \frac{1}{n}\sum_{i=1} ^{n}C_i$
+
+We plot the trends in average clustering coefficient in Figure x.
+
+From the figure, we can clearly see that the average clustering coefficient all increases with the year for each network composed of papers with different numbers of collaborators
 
 
 ### Rich-Club Coefficient
